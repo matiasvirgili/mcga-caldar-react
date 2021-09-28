@@ -14,10 +14,10 @@ const Header = ({ title }) => {
 };
 
 Header.defaultProps = {
-  title: 'Task Tracker',
+  title: 'Calderas',
 };
 
-Header.PropTypes = {
+Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
 export default Header;
