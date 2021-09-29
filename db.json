@@ -1,0 +1,32 @@
+{
+  "boilers": [
+    {
+      "id": 1,
+      "tipo": "A",
+      "estaInstalada": true,
+      "tiempoMantenimientoMinutos": 120,
+      "edificioId": 444
+    },
+    {
+      "id": 2,
+      "tipo": "B",
+      "estaInstalada": true,
+      "tiempoMantenimientoMinutos": 120,
+      "edificioId": 4443
+    },
+    {
+      "id": 3,
+      "tipo": "C",
+      "estaInstalada": true,
+      "tiempoMantenimientoMinutos": 120,
+      "edificioId": 4445
+    },
+    {
+      "id": 4,
+      "tipo": "A",
+      "estaInstalada": true,
+      "tiempoMantenimientoMinutos": 120,
+      "edificioId": 4446
+    }
+  ]
+}

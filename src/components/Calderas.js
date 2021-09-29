@@ -3,8 +3,8 @@ import Caldera from './Caldera';
 const Calderas = ({ calderas, onDelete }) => {
   return (
     <>
-      {calderas.map((caldera) => (
-        <Caldera key={caldera.id} caldera={caldera} onDelete={onDelete} />
+      {calderas.map((caldera, index) => (
+        <Caldera key={index} caldera={caldera} onDelete={onDelete} />
       ))}
     </>
   );

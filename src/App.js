@@ -1,39 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Calderas from './components/Calderas';
 import AddCaldera from './components/AddCaldera';
 
 function App() {
-  const [calderas, setCalderas] = useState([
-    {
-      id: 1,
-      tipo: 'A',
-      estaInstalada: true,
-      tiempoMantenimientoMinutos: 120,
-      edificioId: 444,
-    },
-    {
-      id: 2,
-      tipo: 'B',
-      estaInstalada: true,
-      tiempoMantenimientoMinutos: 120,
-      edificioId: 4443,
-    },
-    {
-      id: 3,
-      tipo: 'C',
-      estaInstalada: true,
-      tiempoMantenimientoMinutos: 120,
-      edificioId: 4445,
-    },
-    {
-      id: 4,
-      tipo: 'A',
-      estaInstalada: true,
-      tiempoMantenimientoMinutos: 120,
-      edificioId: 4446,
-    },
-  ]);
+  const [showAddCaldera, setShowAddCaldera] = useState(false);
+  const [calderas, setCalderas] = useState([]);
+  useEffect(() => {
+    const getCalderas = async () => {
+      const calderasFromServer = await fetchCalderas();
+      setCalderas(calderasFromServer);
+    };
+    getCalderas();
+  }, []);
+
+  // Fetch calderas
+  const fetchCalderas = async () => {
+    const res = await fetch('http://localhost:5000/Boilers');
+    const data = await res.json();
+    return data;
+  };
+
+  // Add caldera
+  const addCaldera = (caldera) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newCaldera = { id, ...caldera };
+    setCalderas([...calderas, newCaldera]);
+  };
 
   // Delete caldera
   const deleteCaldera = (id) => {
@@ -41,12 +34,15 @@ function App() {
   };
   return (
     <div className="container">
-      <Header />
-      <AddCaldera />
+      <Header
+        onAdd={() => setShowAddCaldera(!showAddCaldera)}
+        showAdd={showAddCaldera}
+      />
+      {showAddCaldera && <AddCaldera onAdd={addCaldera} />}
       {calderas.length > 0 ? (
         <Calderas calderas={calderas} onDelete={deleteCaldera} />
       ) : (
-        'No Calderas To Show'
+        'No Boilers To Show'
       )}
     </div>
   );
