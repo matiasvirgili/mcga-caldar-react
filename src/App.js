@@ -16,7 +16,7 @@ function App() {
 
   // Fetch calderas
   const fetchCalderas = async () => {
-    const res = await fetch('http://localhost:5000/Boilers');
+    const res = await fetch('http://localhost:3000/Boilers');
     const data = await res.json();
     return data;
   };
