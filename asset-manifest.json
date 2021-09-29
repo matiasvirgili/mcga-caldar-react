@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mcga-caldar-react/static/css/main.b9c2514b.chunk.css",
+    "main.js": "/mcga-caldar-react/static/js/main.2f5f9921.chunk.js",
+    "main.js.map": "/mcga-caldar-react/static/js/main.2f5f9921.chunk.js.map",
+    "runtime-main.js": "/mcga-caldar-react/static/js/runtime-main.e38505ee.js",
+    "runtime-main.js.map": "/mcga-caldar-react/static/js/runtime-main.e38505ee.js.map",
+    "static/js/2.f5a2dcdc.chunk.js": "/mcga-caldar-react/static/js/2.f5a2dcdc.chunk.js",
+    "static/js/2.f5a2dcdc.chunk.js.map": "/mcga-caldar-react/static/js/2.f5a2dcdc.chunk.js.map",
+    "static/js/3.201c85ed.chunk.js": "/mcga-caldar-react/static/js/3.201c85ed.chunk.js",
+    "static/js/3.201c85ed.chunk.js.map": "/mcga-caldar-react/static/js/3.201c85ed.chunk.js.map",
+    "index.html": "/mcga-caldar-react/index.html",
+    "static/css/main.b9c2514b.chunk.css.map": "/mcga-caldar-react/static/css/main.b9c2514b.chunk.css.map",
+    "static/js/2.f5a2dcdc.chunk.js.LICENSE.txt": "/mcga-caldar-react/static/js/2.f5a2dcdc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e38505ee.js",
+    "static/js/2.f5a2dcdc.chunk.js",
+    "static/css/main.b9c2514b.chunk.css",
+    "static/js/main.2f5f9921.chunk.js"
+  ]
+}
