@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Calderas from './components/Calderas';
+import AddCaldera from './components/AddCaldera';
 
 function App() {
   const [calderas, setCalderas] = useState([
@@ -33,10 +34,20 @@ function App() {
       edificioId: 4446,
     },
   ]);
+
+  // Delete caldera
+  const deleteCaldera = (id) => {
+    setCalderas(calderas.filter((caldera) => caldera.id !== id));
+  };
   return (
     <div className="container">
       <Header />
-      <Calderas calderas={calderas} />
+      <AddCaldera />
+      {calderas.length > 0 ? (
+        <Calderas calderas={calderas} onDelete={deleteCaldera} />
+      ) : (
+        'No Calderas To Show'
+      )}
     </div>
   );
 }
